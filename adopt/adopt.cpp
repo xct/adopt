@@ -139,7 +139,8 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
 		Error("WaitForSingleObject");
 	}
 
-	CloseHandle(hProcess);
+	CloseHandle(hProcess);	
+	VirtualFreeEx(hProcess, dirArgAlloc, 0, MEM_RELEASE);
 	VirtualFreeEx(hProcess, pathArgAlloc, 0, MEM_RELEASE);
 	VirtualFreeEx(hProcess, funcArgsAlloc, 0, MEM_RELEASE);
 	return 0;

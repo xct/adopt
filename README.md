@@ -11,3 +11,7 @@ In 99% of cases you want to use explorer.exe as the target process (it requires 
 Example Usage:
 adopt.exe explorer.exe C:\\windows\\system32\\cmd.exe
 ```
+
+## References
+
+- https://fluendo.com/en/blog/post/dll-injection-coding/
